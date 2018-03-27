@@ -21,17 +21,18 @@ with tf.Session() as sess:
     tensorboard.close()
 
 mplt.subplot(221)
-mplt.plot(numspace, out_relu)
+mplt.plot(numspace, out_relu, label = 'Relu Function')
 mplt.legend(loc = "best")
 
 mplt.subplot(222)
-mplt.plot(numspace, out_tanh)
+mplt.plot(numspace, out_tanh, label = 'Signum Function')
 mplt.legend(loc = "best")
 
 mplt.subplot(223)
-mplt.plot(numspace, out_softplus)
+mplt.plot(numspace, out_softplus, label = 'Softplus Function')
 mplt.legend(loc = "best")
 
 mplt.subplot(224)
-mplt.plot(numspace, out_sigmoid)
+mplt.plot(numspace, out_sigmoid, label = 'Sigmoid Function')
 mplt.legend(loc = "best")
+mplt.show()
