@@ -33,6 +33,6 @@ mplt.plot(numspace, out_softplus, label = 'Softplus Function')
 mplt.legend(loc = "best")
 
 mplt.subplot(224)
-mplt.plot(numspace, out_sigmoid, label = 'Sigmoid Function')
+mplt.plot(numspace, out_sigmoid)
 mplt.legend(loc = "best")
 mplt.show()
