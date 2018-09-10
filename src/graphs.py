@@ -1,5 +1,9 @@
 import tensorflow as tf
 
+#gives you a default graph
+print(tf.get_default_graph())
+
+#Creates  a new graph
 g1 = tf.Graph()
 with g1.as_default():
     a = tf.constant(8)
