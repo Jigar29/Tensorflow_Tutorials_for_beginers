@@ -39,6 +39,7 @@ init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
 
+    tensorboard = tf.summary.FileWriter("../Log/", graph= sess.graph)
     for i in range(no_of_epochs):
         prediction, output , cost = sess.run([predict, model_output, loss], feed_dict={x_train: X, y_train: y})
 
@@ -49,4 +50,6 @@ with tf.Session() as sess:
             plt.plot(X, prediction)
             plt.text(0.8, 1, "Loss = %.4f" %cost, fontdict={'size': 27, 'color': 'red'})
             plt._show()
+
+    tensorboard.close()
     print("The model has been trained successfully ")
