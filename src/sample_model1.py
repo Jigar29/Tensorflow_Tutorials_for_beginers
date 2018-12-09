@@ -14,11 +14,11 @@ x_data = np.linspace(0, 10, num_examples)
 noise  = np.random.randn(len(x_data));
 y_data = (0.5*x_data) + 5 + noise;
 
-#Actual ML creation
 x_df = pd.DataFrame(data=x_data, columns=['X_data']);
 y_df = pd.DataFrame(data=y_data, columns=['Y_data']);
 my_data = pd.concat([x_df, y_df], axis=1);
 
+#Actual ML creation
 x_train = tf.placeholder(tf.float32, shape=[batch_size])
 y_train = tf.placeholder(tf.float32, shape=[batch_size])
 
