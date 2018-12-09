@@ -6,6 +6,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 
+##using estimator API steps
+# 1. generate feture colums
+# 2. generate the estimator or model
+# 3. generate the input function
+# 4. train the model
+# 5. evaluate or predict the model
+
 my_data = pd.read_csv("../Data/cal_housing_clean.csv")
 print(my_data.columns)
 
@@ -43,7 +50,7 @@ predictions = []
 for pre in model.predict(input_fn=pred_input_func):
     predictions.append(pre['predictions'])
 
-error = mean_squared_error(y_test, predictions)**0.5    #Root mean square error 
+error = mean_squared_error(y_test, predictions)**0.5    #Root mean square error
 
 print(error)
 print(training)

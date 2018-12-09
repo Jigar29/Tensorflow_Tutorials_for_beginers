@@ -5,11 +5,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
-num_features = 10;
-num_dense_neurons = 3;
-num_epochs = 200;
-num_examples = 1000;
-batch_size = 10;
+##using estimator API steps
+# 1. generate feture colums
+# 2. generate the estimator or model
+# 3. generate the input function
+# 4. train the model
+# 5. evaluate or predict the model
 
 #Dataset creation
 x_data = np.linspace(0, 10, num_examples)

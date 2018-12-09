@@ -3,6 +3,12 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler as scaler
 from sklearn.model_selection import train_test_split
 
+##using estimator API steps
+# 1. generate feture colums
+# 2. generate the estimator or model
+# 3. generate the input function
+# 4. train the model
+# 5. evaluate or predict the model
 
 my_data = pd.read_csv("../Data/pima-indians-diabetes.csv");
 
