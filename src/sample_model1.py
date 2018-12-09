@@ -9,10 +9,12 @@ num_epochs = 200;
 num_examples = 100000;
 batch_size = 10;
 
+#Dataset creation
 x_data = np.linspace(0, 10, num_examples)
 noise  = np.random.randn(len(x_data));
 y_data = (0.5*x_data) + 5 + noise;
 
+#Actual ML creation
 x_df = pd.DataFrame(data=x_data, columns=['X_data']);
 y_df = pd.DataFrame(data=y_data, columns=['Y_data']);
 my_data = pd.concat([x_df, y_df], axis=1);
@@ -23,7 +25,7 @@ y_train = tf.placeholder(tf.float32, shape=[batch_size])
 weights = tf.Variable(dtype= tf.float32, initial_value=0.81);
 bias = tf.Variable(dtype= tf.float32, initial_value= 1);
 
-y_pred = (x_train*weights) + bias;
+y_pred = tf.add(tf.multiply(x_train, weights), bias);
 
 loss = tf.reduce_sum(tf.square(y_train - y_pred));
 optimiser = tf.train.GradientDescentOptimizer(learning_rate=0.001);
