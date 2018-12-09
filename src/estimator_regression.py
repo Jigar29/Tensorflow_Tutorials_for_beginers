@@ -12,6 +12,8 @@ from sklearn.model_selection import train_test_split
 # 4. train the model
 # 5. evaluate or predict the model
 
+num_examples = 1000;
+
 #Dataset creation
 x_data = np.linspace(0, 10, num_examples)
 noise  = np.random.randn(len(x_data));
